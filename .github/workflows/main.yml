@@ -39,10 +39,19 @@ jobs:
         run: yarn
 
       - name: Lint
+        if: ${{ always() }}
         run: yarn lint
 
       - name: Build
+        if: ${{ always() }}
         run: yarn build -- --prod
 
       - name: Test
+        if: ${{ always() }}
         run: yarn test -- --configuration=ci
+
+      - name: All Checks Passing!
+        if: ${{ success() }}
+
+      - name: Suspicious...
+        if: ${{ failure() }}
