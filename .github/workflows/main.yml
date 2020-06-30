@@ -52,6 +52,8 @@ jobs:
 
       - name: All Checks Passing!
         if: ${{ success() }}
+        run: echo Passing!
 
       - name: Suspicious...
         if: ${{ failure() }}
+        run: echo Suspicious....
