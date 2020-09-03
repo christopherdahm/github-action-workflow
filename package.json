@@ -2,6 +2,7 @@
   "name": "ng-sampler",
   "version": "0.0.0",
   "scripts": {
+    "ha": "re ha",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
